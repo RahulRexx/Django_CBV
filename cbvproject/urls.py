@@ -20,5 +20,7 @@ from cbvapp import views
 
 urlpatterns = [
     url(r'^$',views.CBView.as_view()),
+    url(r'^template/$',views.indexView.as_view()),
+    url(r'^cbvapp/',include('cbvapp.urls',namespace='cbvapp')),
     url('admin/', admin.site.urls),
 ]
